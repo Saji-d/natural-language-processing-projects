@@ -1,68 +1,72 @@
-# 📊 Financial Sentiment Analysis using BERT and FinBERT
+📊 Financial Sentiment Analysis using BERT and FinBERT
+=====================================================
 
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-FFD21E?logo=huggingface&logoColor=black)
-![NLP](https://img.shields.io/badge/NLP-Sentiment%20Analysis-4CAF50)
-![Academic Project](https://img.shields.io/badge/Academic_Project-Yes-6A1B9A)
+![Transformers](https://img.shields.io/badge/Transformers-FFD21E?logo=huggingface&logoColor=black)
+![NLP](https://img.shields.io/badge/NLP-6A5ACD)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white)
+
+A comparative **Natural Language Processing (NLP)** project analyzing **financial sentiment**
+using transformer-based models, with a focus on **BERT vs FinBERT** and the impact of
+**domain-specific pretraining**.
 
 ---
 
 ## 📌 Overview
 
-This project presents a **comparative study of BERT and FinBERT** for **financial sentiment classification**, focusing on how **domain-specific pretraining** impacts model performance.
+This project presents a **comparative study of BERT and FinBERT** for **financial sentiment classification**.
+The task involves classifying financial text into **positive, neutral, and negative sentiment**
+using transformer models fine-tuned under identical experimental conditions.
 
-The task involves classifying financial text into **positive, neutral, and negative sentiment**, using transformer-based models fine-tuned under identical experimental settings for a fair comparison.
-
-This work was completed as part of an **academic Natural Language Processing (NLP) course**.
+The goal is to evaluate how **domain-adapted language models** perform compared to
+general-purpose transformers on financial text.
 
 ---
 
 ## 🎯 Objectives
-
-- Perform sentiment analysis on financial text data  
-- Compare **general-purpose BERT** vs **domain-specific FinBERT**  
-- Evaluate performance using **Accuracy** and **Macro-F1 score**  
-- Analyze the effect of financial-domain pretraining  
+- Perform sentiment analysis on financial text data
+- Compare **general-purpose BERT** with **domain-specific FinBERT**
+- Evaluate model performance using standard classification metrics
+- Analyze the effect of financial-domain pretraining
 
 ---
 
 ## 🧠 Models Used
 
-### 🔹 BERT (Baseline)
+### 🔹 BERT
 - Model: `bert-base-uncased`
 - Pretrained on general-domain corpora
-- Used as a benchmark model
+- Used as a baseline transformer model
 
-### 🔹 FinBERT (Domain-Specific)
+### 🔹 FinBERT
 - Model: `ProsusAI/finbert`
 - Pretrained on financial news and reports
-- Better captures financial language and sentiment
+- Designed to capture domain-specific financial sentiment
 
 ---
 
 ## 📂 Datasets
 
-The experiments were conducted using **publicly available financial sentiment datasets**:
+Experiments were conducted using **public financial sentiment datasets**, including:
 
-### 🔹 Financial PhraseBank–like Dataset
-- Financial news statements and short texts
-- Labels: `positive`, `neutral`, `negative`
+- **Financial PhraseBank–style data**
+  - Financial news headlines and short statements
+  - Labels: positive, neutral, negative
 
-### 🔹 FiQA-style Financial Dataset
-- Financial questions, reports, and market-related text
-- Labels: `positive`, `neutral`, `negative`
+- **FiQA-style financial data**
+  - Financial questions, reports, and market-related text
+  - Labels: positive, neutral, negative
 
-All datasets were **cleaned, normalized, and label-mapped consistently** before training.
+All datasets were **cleaned, normalized, and label-mapped consistently** prior to training.
 
 ---
 
 ## ⚙️ Experimental Setup
-
-- **Platform:** Google Colab (GPU enabled)
-- **Language:** Python 3
-- **Framework:** PyTorch
-- **Libraries:** Hugging Face Transformers, Datasets, Scikit-learn, NumPy, Pandas, Matplotlib
+- Language: Python 3
+- Framework: PyTorch
+- Libraries: Hugging Face Transformers, Scikit-learn, NumPy, Pandas, Matplotlib
+- Platform: GPU-enabled environment (Google Colab)
 
 ### Training Configuration
 - Epochs: 3  
@@ -75,33 +79,32 @@ All datasets were **cleaned, normalized, and label-mapped consistently** before 
 ---
 
 ## 📈 Results Summary
-
 - **FinBERT consistently outperformed BERT**
 - Higher **Accuracy** and **Macro-F1 score**
 - Reduced confusion between neutral and positive classes
-- Stronger understanding of financial context
+- Stronger understanding of financial-domain context
 
-📌 **Key Insight:**  
-Domain-specific pretraining significantly improves sentiment analysis performance in financial text.
+**Key Insight:**  
+Domain-specific pretraining significantly improves sentiment classification performance
+for financial text.
 
 ---
 
 ## 📊 Evaluation Metrics
-
-- Accuracy  
-- Macro-F1 Score  
-- Confusion Matrix Analysis  
+- Accuracy
+- Macro-F1 Score
+- Confusion Matrix Analysis
 
 ---
 
 ## 📄 Documentation
 
-A detailed project report including:
-- Dataset description  
-- Model architecture  
-- Training methodology  
-- Experimental results  
-- Confusion matrix analysis  
+A detailed project report is included, covering:
+- Dataset description
+- Model architecture
+- Training methodology
+- Experimental results
+- Confusion matrix analysis
 
 📘 **Report:**  
 `financial_sentiment_bert_vs_finbert.pdf`
@@ -110,22 +113,16 @@ A detailed project report including:
 
 ## 🎓 Academic Context
 
-This project was developed as part of an **NLP course** to demonstrate:
+This project was completed as part of **Natural Language Processing coursework**, with emphasis on:
 - Transformer-based sentiment analysis
 - Fair experimental comparison
 - Financial-domain NLP modeling
-- Research-style evaluation and reporting
+- Research-oriented evaluation and reporting
 
 ---
 
 ## 👤 Author
-
 **Sajidur Rahman Sajid**  
 Computer Science & Engineering (CSE)  
-American International University–Bangladesh (AIUB)
+Aspiring **Aspiring AI / Machine Learning / NLP Engineer**
 
----
-
-## 📜 License
-
-This repository is shared for **educational and academic purposes**.
