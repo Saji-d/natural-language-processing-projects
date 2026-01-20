@@ -13,27 +13,7 @@ These projects focus on **text preprocessing, feature extraction, sentiment anal
 
 ## 📂 Projects Included
 
-### 1️⃣ Twitter Sentiment Analysis
-📌 **Objective:**  
-Analyze public sentiment from Twitter data using classical machine learning techniques.
-
-📌 **Key Highlights:**
-- Text cleaning and preprocessing
-- Tokenization and feature extraction
-- Sentiment classification (Positive / Negative)
-- Model evaluation and performance analysis
-
-📌 **Contents:**
-- `twitter_sentiment_analysis.ipynb`
-- Preprocessed and raw Twitter sentiment datasets
-- Project report explaining methodology and results
-
-📌 **Dataset:**
-- Balanced Twitter sentiment dataset derived from publicly available sources
-
----
-
-### 2️⃣ Financial Sentiment Analysis — BERT vs FinBERT
+### 1️⃣ Financial Sentiment Analysis — BERT vs FinBERT
 📌 **Objective:**  
 Compare the performance of **BERT** and **FinBERT** for sentiment classification in the **financial domain**.
 
@@ -55,6 +35,26 @@ Compare the performance of **BERT** and **FinBERT** for sentiment classification
 📌 **Datasets:**
 - Financial News Sentiment Dataset  
 - Financial Finance-QA Sentiment Dataset  
+
+---
+
+### 2️⃣ Twitter Sentiment Analysis
+📌 **Objective:**  
+Analyze public sentiment from Twitter data using classical machine learning techniques.
+
+📌 **Key Highlights:**
+- Text cleaning and preprocessing
+- Tokenization and feature extraction
+- Sentiment classification (Positive / Negative)
+- Model evaluation and performance analysis
+
+📌 **Contents:**
+- `twitter_sentiment_analysis.ipynb`
+- Preprocessed and raw Twitter sentiment datasets
+- Project report explaining methodology and results
+
+📌 **Dataset:**
+- Balanced Twitter sentiment dataset derived from publicly available sources
 
 ---
 
@@ -98,4 +98,4 @@ These projects were completed as part of **Natural Language Processing coursewor
 ## 👤 Author
 **Sajidur Rahman Sajid**  
 Computer Science & Engineering (CSE)  
-Aspiring AI / ML Engineer
+Aspiring **AI / Machine Learning / NLP Engineer**
