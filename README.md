@@ -72,6 +72,7 @@ Analyze public sentiment from Twitter data using classical machine learning tech
 ## 📁 Repository Structure
 ```text
 natural-language-processing-projects/
+│
 ├── financial-sentiment-analysis-bert-vs-finbert/
 │   ├── financial_sentiment_bert_vs_finbert.ipynb
 │   ├── README.md
@@ -83,6 +84,10 @@ natural-language-processing-projects/
 │   ├── README.md
 │   └── report/
 │       └── twitter-sentiment-analysis.pdf
+│
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 ---
 
