@@ -1,194 +1,99 @@
 # 🐦 Twitter Sentiment Analysis using NLP & Machine Learning
 
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
-![NLP](https://img.shields.io/badge/NLP-Text%20Processing-4CAF50)
-![Scikit-learn](https://img.shields.io/badge/scikit--learn-ML-F7931E?logo=scikit-learn&logoColor=white)
-![NLTK](https://img.shields.io/badge/NLTK-Natural%20Language%20Processing-9C27B0)
-![Academic Project](https://img.shields.io/badge/Academic_Project-Yes-2E7D32)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![NLP](https://img.shields.io/badge/NLP-6A5ACD)
+![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikit-learn&logoColor=white)
+![NLTK](https://img.shields.io/badge/NLTK-9C27B0)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white)
+
+An end-to-end **Natural Language Processing (NLP)** project that performs **sentiment analysis on Twitter data**
+using classical machine learning techniques and a complete text preprocessing pipeline.
 
 ---
 
 ## 📌 Overview
 
-This project implements a **Twitter Sentiment Analysis system** using **Natural Language Processing (NLP)** and **Machine Learning** techniques.  
-The goal is to classify tweets into **positive** or **negative** sentiment by applying a complete NLP pipeline followed by a **Naïve Bayes classifier**.
+This project implements a **Twitter Sentiment Analysis system** that classifies tweets into **positive** or
+**negative** sentiment using **TF-IDF feature extraction** and a **Multinomial Naïve Bayes classifier**.
 
-The project was developed as part of an **academic NLP course** and focuses on **text preprocessing, feature extraction, and model evaluation**, rather than deployment.
+The focus of this work is on **text preprocessing, feature engineering, and model evaluation**, rather than
+deployment or API integration.
 
 ---
 
 ## 🎯 Objectives
 
-- Perform end-to-end sentiment analysis on real-world Twitter data  
+- Perform sentiment analysis on real-world Twitter data  
 - Apply standard NLP preprocessing techniques  
-- Convert text into numerical features using **TF-IDF**
-- Train and evaluate a **Multinomial Naïve Bayes** model
-- Analyze model performance using accuracy, classification report, and confusion matrix
+- Convert text into numerical features using **TF-IDF**  
+- Train and evaluate a **Multinomial Naïve Bayes** model  
 
 ---
 
 ## 📂 Dataset
 
 - **Dataset Name:** Sentiment140  
-- **Source:** Kaggle  
-- **Link:** https://www.kaggle.com/datasets/kazanova/sentiment140
+- **Source:** Kaggle
+- **Link:** https://www.kaggle.com/datasets/kazanova/sentiment140 
+- **Size:** 1.6 million tweets  
 
-### Dataset Details
-- 1.6 million tweets
-- Sentiment labels:
-  - `0` → Negative
-  - `4` → Positive
-- Neutral tweets are excluded
-- Balanced to **200,000 tweets** (100k positive + 100k negative)
+### Label Mapping
+- `0` → Negative  
+- `4` → Positive  
 
-The processed and balanced dataset is saved as:
-balanced_sentiment140_no_neutral.csv
-
+Neutral tweets were excluded.  
+The dataset was **balanced to 200,000 tweets** (100k positive + 100k negative).
 
 ---
 
-## 🛠️ NLP Pipeline
+## 🛠 NLP Pipeline
 
 The following preprocessing steps were applied:
 
-1. Lowercasing text  
-2. Removing URLs, mentions, hashtags, and special characters  
-3. Removing punctuation  
-4. Tokenization  
-5. Stopword removal  
-6. Synonym substitution using **WordNet**  
-7. Stemming (Porter Stemmer)  
-8. Lemmatization (WordNet Lemmatizer)  
-9. Final text reconstruction  
+- Lowercasing text  
+- Removing URLs, mentions, hashtags, and punctuation  
+- Tokenization  
+- Stopword removal  
+- Stemming (Porter Stemmer)  
+- Lemmatization (WordNet Lemmatizer)  
 
 ---
 
 ## 📊 Feature Engineering
 
 - **TF-IDF Vectorization**
-  - Max features: `10,000`
+  - Maximum features: `10,000`
   - N-grams: `(1, 2)` (unigrams + bigrams)
 
 ---
 
-## 🤖 Model Used
+## 🤖 Model
 
 - **Multinomial Naïve Bayes**
-- Trained using TF-IDF features
+- Trained on TF-IDF features
 - Stratified train-test split (80% train / 20% test)
 
 ---
 
-## 📈 Evaluation Metrics
+## 📈 Evaluation
 
-- Accuracy
-- Precision, Recall, F1-score
-- Confusion Matrix visualization
+Evaluation was performed using:
 
-The trained model achieves an accuracy of approximately **74%** on the test set.
+- Accuracy  
+- Precision, Recall, F1-score  
+- Confusion Matrix  
 
----
-
-## 🧪 Example Prediction
-
-```text
-Input:  "I hate this"
-Output: Negative
-
-Input:  "good"
-Output: Positive
-
-
----
-
-## 🛠️ NLP Pipeline
-
-The following preprocessing steps were applied:
-
-1. Lowercasing text  
-2. Removing URLs, mentions, hashtags, and special characters  
-3. Removing punctuation  
-4. Tokenization  
-5. Stopword removal  
-6. Synonym substitution using **WordNet**  
-7. Stemming (Porter Stemmer)  
-8. Lemmatization (WordNet Lemmatizer)  
-9. Final text reconstruction  
-
----
-
-## 📊 Feature Engineering
-
-- **TF-IDF Vectorization**
-  - Max features: `10,000`
-  - N-grams: `(1, 2)` (unigrams + bigrams)
-
----
-
-## 🤖 Model Used
-
-- **Multinomial Naïve Bayes**
-- Trained using TF-IDF features
-- Stratified train-test split (80% train / 20% test)
-
----
-
-## 📈 Evaluation Metrics
-
-- Accuracy
-- Precision, Recall, F1-score
-- Confusion Matrix visualization
-
-The trained model achieves an accuracy of approximately **74%** on the test set.
-
----
-
-## 🧪 Example Prediction
-
-```text
-Input:  "I hate this"
-Output: Negative
-
-Input:  "good"
-Output: Positive
-
----
-
-## 📁 Project Structure
-
-
-twitter-sentiment-analysis/
-│
-├── data/
-│   ├── raw/
-│   │   └── training.1600000.processed.noemoticon.csv
-│   └── processed/
-│       └── balanced_sentiment140_no_neutral.csv
-│
-├── report/
-│   └── twitter-sentiment-analysis.pdf
-│
-├── twitter_sentiment_analysis.ipynb
-└── README.md
+**Test Accuracy:** approximately **74%**
 
 ---
 
 ## 🎓 Academic Context
 
-This project was completed as part of an **NLP course**, demonstrating practical understanding of:
+This project was completed as part of a **Natural Language Processing (NLP) course**, demonstrating:
 
-- Text preprocessing techniques  
-- NLP feature extraction  
-- Machine learning-based text classification  
-- Model evaluation and analysis  
-
----
-
-## ⚠️ Notes
-
-- This project is intended for **educational and learning purposes**
-- No deployment or API integration is included
-- Dataset credits belong to the original creators (**Sentiment140**)
+- Practical NLP pipelines  
+- Machine learning-based sentiment classification  
+- Feature extraction and evaluation techniques  
 
 ---
 
@@ -196,8 +101,4 @@ This project was completed as part of an **NLP course**, demonstrating practical
 
 **Sajidur Rahman Sajid**  
 Computer Science & Engineering (CSE)  
-Interested in **AI / Machine Learning / NLP**
-
----
-
-⭐ Feel free to explore the notebook and documentation to understand the full workflow.
+Aspiring **AI / Machine Learning / NLP Engineer**
